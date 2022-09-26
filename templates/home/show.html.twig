@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil
+{% endblock %}
+
+{% block body %}
+  <div class="card mb-3">
+
+    <h3 class="card-header">{{article.title}}</h3>
+
+  
+      <img class="rounded mx-auto d-block" src="https://picsum.photos/300/200?random=1" alt="{{article.title}}" width="50%">
+
+
+    <div class="card-body">
+      <p class="card-text">{{article.content}}</p>
+    </div>
+
+    <div class="card-footer text-muted">
+      Publiéé:
+      {{article.createdAt|date("d M Y à H:m")}}
+      <br>
+      Par:
+      {{article.user}}
+    </div>
+
+  </div>
+{% endblock %}
