@@ -34,7 +34,11 @@ gtag('config', 'UA-23019901-1');
 			<div class="container-fluid">
 				<a class="navbar-brand" href="{{path('app_home')}}">BlogjStore</a>
 				<div class="ms-auto">
-					<a class="navbar-brand " href="{{path('admin')}}">Dashboard</a>
+
+					{% if is_granted("ROLE_ADMIN") %}
+						<a class="navbar-brand " href="{{path('admin')}}">Dashboard</a>
+					{% endif %}
+
 					{% if app.user %}
 						<a class="navbar-brand " href="{{path('app_logout')}}">Me déconnecter</a>
 					{% else %}
