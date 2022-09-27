@@ -34,7 +34,6 @@ gtag('config', 'UA-23019901-1');
 			<div class="container-fluid">
 				<a class="navbar-brand" href="{{path('app_home')}}">BlogjStore</a>
 				<div class="ms-auto">
-{# c'est une commentaire #}
 					{% if is_granted("ROLE_ADMIN") %}
 						<a class="navbar-brand " href="{{path('admin')}}">Dashboard</a>
 					{% endif %}
